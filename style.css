@@ -1,12 +1,14 @@
 /** Variable Imports **/
-@import './variables.css';
+@import "./variables.css";
 
 /**
   CSS Reset
   Source: https://www.joshwcomeau.com/css/custom-css-reset/
 **/
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /* 2. Remove default margin */
@@ -20,34 +22,239 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /** Your CSS Below **/
 
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"); */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--fs-base);
+}
+
+body {
+  background: var(--clr-paleBlue);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  height: 157vh;
+  /* max-width: var(--width-desktop); */
+  /* max-width: 1440px;
+  max-height: 1280px; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-white);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px var(--clr-lightLavender);
+  max-width: var(--width-mobile);
+  width: 100%;
+}
+
+.result-card {
+  background: linear-gradient(
+    180deg,
+    var(--gra-lightSlateBlue),
+    var(--gra-lightRoyalBlue)
+  );
+  color: var(--clr-white);
+  padding: 40px;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.result-card h3 {
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+.score {
+  background: linear-gradient(
+    180deg,
+    var(--gra-violetBlue),
+    var(--gra-persianBlue)
+  );
+  width: 180px;
+  height: 180px;
+  margin: 30px auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-score {
+  font-size: 70px;
+  font-weight: var(--fw-black);
+  line-height: 70px;
+}
+
+.small-score {
+  font-size: 18px;
+  opacity: 0.4;
+  font-weight: var(--fw-bold);
+}
+
+.result-card h2 {
+  font-size: 33px;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 19px;
+  opacity: 0.8;
+  margin-top: 10px;
+  line-height: 24px;
+}
+
+.summary-card {
+  padding: 40px;
+}
+
+.summary-card h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: var(--clr-darkGrayBlue);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  border-radius: 15px;
+  font-size: 18px;
+  margin-bottom: 18px;
+  font-weight: var(--fw-bold);
+}
+
+.summary-item_names {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.summary-item_names img {
+  size: 3px;
+}
+
+.summary-item span {
+  color: var(--clr-darkGrayBlue);
+  font-weight: var(--fw-bold);
+}
+.max-score {
+  color: rgb(137, 135, 135);
+}
+.reaction {
+  background: #f9f2ef;
+  color: var(--clr-lightRed);
+}
+.memory {
+  background: #fbf8ed;
+  color: var(--clr-orangeYellow);
+}
+.verbal {
+  background: #f0fbf9;
+  color: var(--clr-greenTeal);
+}
+.visual {
+  background: var(--clr-paleBlue);
+  color: var(--clr-cobaltBlue);
+}
+
+.continue-btn {
+  background: var(--clr-darkGrayBlue);
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 19px;
+  font-weight: var(--fw-bold);
+  border-radius: 2rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background: var(--clr-darkGrayBlue);
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .result-card {
+    width: 50%;
+    border-radius: 2rem;
+  }
+
+  .summary-card {
+    width: 50%;
+    padding: 40px;
+  }
+
+  .continue-btn {
+    margin-top: 20px;
+    padding: 15px;
+  }
+}
+
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

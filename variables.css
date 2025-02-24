@@ -18,12 +18,12 @@
 :root {
   /* Layout */
   --width-mobile: 375px;
-  --width-desktop: 1440;
+  --width-desktop: 1440px;
 
   /* Colours */
   --clr-lightRed: hsl(0, 100%, 67%);
   --clr-orangeYellow: hsl(39, 100%, 56%);
-  --clr-greenTeal: hsl(166, 100%, 3%);
+  --clr-greenTeal: hsl(160, 100%, 37%);
   --clr-cobaltBlue: hsl(234, 85%, 45%);
 
   /* Gradients */
@@ -31,7 +31,7 @@
   --gra-lightRoyalBlue: hsl(241, 81%, 54%); /* Background */
 
   --gra-violetBlue: hsl(256, 72%, 46%, 1); /* Circle */
-  --gra-persianBlue: hsl(241%, 72%, 46%, 0); /* Circle */
+  --gra-persianBlue: hsl(241, 72%, 46%, 0); /* Circle */
 
   /* Neutral Colours */
   --clr-white: hsl(0, 0%, 100%);
