@@ -84,7 +84,7 @@ body {
   gap: 3rem;
   justify-content: center;
   align-items: center;
-  height: 157vh;
+  padding-top: 5rem;
   /* max-width: var(--width-desktop); */
   /* max-width: 1440px;
   max-height: 1280px; */
