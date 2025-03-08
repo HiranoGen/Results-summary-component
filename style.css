@@ -223,13 +223,13 @@ body {
   cursor: pointer;
 }
 
-.continue-btn:hover {
+/* .continue-btn:hover {
   background: linear-gradient(
     180deg,
     var(--gra-lightSlateBlue),
     var(--gra-lightRoyalBlue)
   );
-}
+} */
 
 @media screen and (min-width: 600px) {
   .container {
